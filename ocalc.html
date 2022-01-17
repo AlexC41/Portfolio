@@ -21,13 +21,13 @@
         <div class = "container">
             <div>Cost calculator</div>
             <div class = "selection">
-                <a href="#" id = "sel">Buildings</a>
+                <a href="#" class = "sel" id = "buildings" onclick="HidenSeek(this)" value = "1">Buildings</a>
                 ` - `
-                <a href="#" id = "sel">Researches</a>
+                <a href="#" class = "sel" id = "research" onclick="HidenSeek(this)">Researches</a>
                 ` - `
-                <a href="#" id = "sel">Fleet</a>
+                <a href="#" class = "sel" id = "fleet" onclick="HidenSeek(this)">Fleet</a>
                 ` - `
-                <a href="#" id = "sel">Defense</a>
+                <a href="#" class = "sel" id = "defense" onclick="HidenSeek(this)">Defense</a>
                     <!-- de scos backticks-urile din vizual sau cautat alta solutie -->
             </div>
 
@@ -53,7 +53,8 @@
                 Level : <input type="text" maxlength = "2" oninput="show()" id = "bla" value = "4">
             </div>
 
-            <select class = "test" size = "5" oninput="show()">
+            <select class = "test" size = "16" oninput="show()">
+                <!-- from here down are for buildings -->
                 <option value="0">Metal Mine</option>
                 <option value="1">Crystal Mine</option>
                 <option value="2">Deuterium Synthesizer</option>
@@ -66,6 +67,59 @@
                 <option value="9">Shipyard</option>
                 <option value="10">Research Lab</option>
                 <option value="11">Alliance Depot</option>
+                <option value="12">Missile Silo</option>
+                <option value="13">Nanite Factory</option>
+                <option value="14">Terraformer</option>
+                <option value="15">Space Dock</option>
+
+                <!-- from here down are for research -->
+                <option value="16">Energy Technology</option>
+                <option value="17">Laser Technology</option>
+                <option value="18">Ion Technology</option>
+                <option value="19">Hyperspace Technology</option>
+                <option value="20">Plasma Technology</option>
+                <option value="21">Combustion Drive</option>
+                <option value="22">Impulse Drive</option>
+                <option value="23">Hyperspace Drive</option>
+                <option value="24">Espionage Technology</option>
+                <option value="25">Computer Technology</option>
+                <option value="26">Astrophysics</option>
+                <option value="27">Intergalactic Research Network</option>
+                <option value="28">Graviton Technology</option>
+                <option value="29">Weapons Technology</option>
+                <option value="30">Shielding Technology</option>
+                <option value="31">Armour Technology</option>
+
+                <!-- from here down are for fleet -->
+                <option value="32">Small Cargo</option>
+                <option value="33">Large Cargo</option>
+                <option value="34">Colony Ship</option>
+                <option value="35">Recycler</option>
+                <option value="36">Espionage Probe</option>
+                <option value="37">Solar Satellite</option>
+                <option value="38">Crawler</option>
+                <option value="39">Light Fighter</option>
+                <option value="40">Heavy Fighter</option>
+                <option value="41">Cruiser</option>
+                <option value="42">Battleship</option>
+                <option value="43">Battlecruiser</option>
+                <option value="44">Bomber</option>
+                <option value="45">Destroyer</option>
+                <option value="46">Deathstar</option>
+                <option value="47">Reaper</option>
+                <option value="48">Pathfinder</option>
+
+                <!-- from here down are for defense -->
+                <option value="49">Rocket Launcher</option>
+                <option value="50">Light Laser</option>
+                <option value="51">Heavy Laser</option>
+                <option value="52">Gauss Cannon</option>
+                <option value="53">Ion Cannon</option>
+                <option value="54">Plasma Turret</option>
+                <option value="55">Small Shield Dome</option>
+                <option value="56">Large Shield Dome</option>
+                <option value="57">Anti-Ballistic Missiles</option>
+                <option value="58">Interplanetary Missiles</option>               
             </select>
 
             <div>
@@ -91,6 +145,10 @@
 
                 <div>
                     Energy Technology : <input type="text" maxlength = "2" oninput="show()" value = "3" id = "enTech">
+                </div>
+
+                <div>
+                    Max Temperature : <input type="text" maxlength = "2" oninput="show()" value = "81" id = "maxTemp">
                 </div>
 
                 <div>

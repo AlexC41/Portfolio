@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeCards</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>PokeCards</h1>
+    <div class = "container">
+        <div class = "poke-menu">
+            <div class = "menu">
+                <div><a href="index.html">Home</a></div>
+                <div><a href="clock.html">Clock</a></div>
+                <div><a href="blog.html">Blog</a></div>
+                <div>To be continued</div>
+            </div>
+            <div>
+                <input id = "input" type = "number" placeholder = "Add pokemon ID" >
+                <button id = "button" value="Add Number">Submit</button>
+                <div id = "history"></div>
+            </div>    
+        </div>
+        <div class = "main_content">
+            <div class ="limits">
+                <div class ="basicInfo">
+                    <div class ="name">Name</div>
+                    <div class ="hpType">40HP <img src="" alt="test" id = "pokeType1"><img src="" alt="test" id = "pokeType2" style="display: none;"> </div>
+                </div>
+                <!-- https://upload.wikimedia.org/wikipedia/en/2/28/Pok%C3%A9mon_Bulbasaur_art.png -->
+                <div class ="image">
+                    <img src="resources/logo_pokemon.png" alt="img reprezentativa" class = "poke" style = "width: 12rem; height: auto; object-position: 0px 0px;">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2bc72d3c-39ce-45f3-a55c-e0903291ace0/d17dpy4-a8d0b94a-0351-4d9b-9636-33cc1842f0d2.jpg/v1/fill/w_600,h_486,q_75,strp/background_art_for_pokemon_by_orangedroplet_d17dpy4-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDg2IiwicGF0aCI6IlwvZlwvMmJjNzJkM2MtMzljZS00NWYzLWE1NWMtZTA5MDMyOTFhY2UwXC9kMTdkcHk0LWE4ZDBiOTRhLTAzNTEtNGQ5Yi05NjM2LTMzY2MxODQyZjBkMi5qcGciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.Xa7d7pbU0rU7MNWAomQrAPKjMwYxdB82ALLKMZO_pOs" alt="img reprezentativa" class = "pokeBack" >
+                </div>
+                <div class ="desc">Height: 10' Weight: 15kg</div>
+                <div class ="powMove">
+                    <div class = "moveType"><img src="" alt="???" id = "moveType"></div>
+                    <div class = "moveDesc">
+                        <div id = "mName" style = "font-weight: bold;"></div>
+                        <div id = "mDesc"></div>
+                    </div>
+                    <div class = "movePow">50</div>
+                </div>
+                <div class ="WNS">
+                    <div class = "weak">
+                        <div>Weakness</div>
+                        <div><img src="https://logodix.com/logo/565603.jpg" alt="img of the type" id = "weakImg"></div>
+                    </div>
+                    <div class ="resistance">
+                        <div>Resistance</div>
+                    </div>
+                    <div class ="strong">
+                        <div>Strength</div>
+                        <div><img src="https://logodix.com/logo/565603.jpg" alt="img of the type" id = "strImg"></div>
+                    </div>
+                </div>
+                <div class ="bio">I will just let a short Lorem of a few words: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, quo!</div>
+                <!-- consectetur adipiscing elit. Vestibulum at pharetra turpis, et ullamcorper orci. Quisque congue molestie libero, et porta quam egestas quis. Donec. -->
+            </div>
+        </div>
+        <div class= "contact">
+            <div><a href="https://www.facebook.com/profile.php?id=100000763151005"><img src="resources/facebook logo.png" alt="facebook" class = "fb" id = "smPic"></a></div>
+            <div><a href="https://www.instagram.com/alexandru.c4/"><img src="resources/instagram logo.png" alt="instagram" class= "insta" id = "smPic"></a></div>
+            <div><img src="resources/gmail logo.png" alt="email" class= "email" id = "smPic" style="object-fit: cover" title="alexandru.ciuta.21@gmail.com"></div>
+            <div><img src="resources/WhatsApp logo.png" alt="telefon" class= "phone" id = "smPic" title="+40760941101"></div>
+        </div>
+    </div>
+
+    <!-- https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Pok%C3%A9mon_Fire_Type_Icon.svg/120px-Pok%C3%A9mon_Fire_Type_Icon.svg.png -->
+    
+    <script src="poke.js"></script>
+</body>
+</html>
+

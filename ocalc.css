@@ -1,0 +1,54 @@
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    width: 100%;
+    background-image: url("resources/portfolio_back.png");
+    background-size: 100% auto;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img {
+    object-fit: cover; 
+    width: 50vw
+}
+
+.main {
+    display: flex;
+}
+
+.menu {
+    border: 5px solid black;
+    text-align: center;
+    width: 15vw;
+    line-height: 1.5;
+    height: fit-content;
+    margin: 0px 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.selection {
+    display: flex;
+    /* flex-direction: row; */
+
+}
+
+.results {
+    display: grid;
+    grid-template-columns: repeat(6, 5rem);
+    grid-template-rows: auto;
+
+}
+
+
+
+.test {
+    width: 20vw;
+}

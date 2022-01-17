@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="clock.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pushster&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <h1>Clock - only digital, or both??? You will have to find out :))</h1>
+    <div class = "container">
+        <div class= "menu">
+            <div><a href="index.html">Home</a></div>
+            <div><a href="calculator.html">Calculator</a></div>
+            <div><a href="blog.html">Blog</a></div>
+            <div><a href="calendar.html">Calendar</a></div>
+            <div><a href="gmail_inbox.html">Gmail inbox</a></div>
+            <div><a href="telefoane.html">Telefoane</a></div>
+            <div><a href="PokeCards.html">PokeCards</a></div>
+            <div>To be continued</div>
+            <div class = "HnS"><button onclick="HidenSeek(options)"><img src="resources/options icon.png" alt="">Settings</button></div>
+        </div>
+        <div class = "content">
+            <div class = "clock_content">
+                <div class = "sets">
+                    <div class = "options"> 
+                        <div class = "settings">
+                            <div class = "tech_sett">
+                                <div class = "sliderCheck">
+                                    <div class = "names">
+                                        <div>Digital : </div>
+                                        <div>Date : </div>
+                                        <div>12h Format : </div>
+                                    </div>
+                                    <div class = "sliders">
+                                        <label class = "placeholder" id = "digitalSlide">
+                                            <input type = "checkbox" checked>
+                                            <span class = "slider"></span>
+                                        </label>
+                                        <label class = "placeholder" id = "dateSlide" >
+                                            <input type = "checkbox" onclick="HidenSeek(date)" checked>
+                                            <span class = "slider"></span>
+                                        </label>
+                                        <label class = "placeholder">
+                                            <input type = "checkbox" id = "formatSlide">
+                                            <span class = "slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <form class = "tech_sett">
+                                <div>Type</div>
+                                <label for = "type1"><input type ="radio" id = "type" name = "date" value = "type1" onchange = "typeSelect(this)" checked>Type 1 >>> Basic</label>
+                                <label for = "type2"><input type ="radio" id = "type" name = "date" value = "type2" onchange = "typeSelect(this)">Type 2 >>> Digits</label>                            
+                                <label for = "type3"><input type ="radio" id = "type" name = "date" value = "type3" onchange = "typeSelect(this)">Type 3 >>> Sliders</label>                            
+                            </form>
+                        </div>
+                        <div class = "display">
+                            <div class = "clockEdit"> Clock Edit
+                                <div class = "fontFam"><label for = "fontFamC">Font : </label>
+                                    <select name = "fontFamC" id = "fontFamC" onchange = "fontClock(clock, this)">
+                                        <option value = "basic">Default</option>
+                                        <option value = "arial">Arial</option>
+                                        <option value = "Comic Sans MS, Comic Sans, cursive">Comic Sans</option>
+                                        <option value = "'Pushster', cursive">Google font 1</option>
+                                        <option value = "Add URL">Add URL</option>
+                                    </select>
+                                </div>
+                                <div class = "fontURLContC" style = "display: none">
+                                    <label for = "fontURL">Font URL</label>
+                                    <input type = "text" id = "fontURL" placeholder="W.I.P.">
+                                </div>
+                                <div>
+                                    <label for = "fontSizeC">Font Size : </label>
+                                    <input type = "number" id = "fontSizeC" oninput = "textDeco(clock, shadowHC, shadowVC, shadowBC, shadowCPC, fontSizeC)" value = 100>
+                                </div>
+                                <div>
+                                    <label for = "clockColor">Font Color : </label>
+                                    <input type = "color" id = "clockColor" oninput = "colorChanger(clock, clockColor)">
+                                </div>
+                                <div>
+                                    <label for = "shadowHC">Shadow Horizontal : </label>
+                                    <input type = "number" id = "shadowHC" oninput = "textDeco(clock, shadowHC, shadowVC, shadowBC, shadowCPC, fontSizeC)" value = 0>
+                                </div>
+                                <div>
+                                    <label for = "shadowVC">Shadow Vertical : </label>
+                                    <input type = "number" id = "shadowVC" oninput = "textDeco(clock, shadowHC, shadowVC, shadowBC, shadowCPC, fontSizeC)" value = 0>
+                                </div>
+                                <div>
+                                    <label for = "shadowBC">Shadow Blur : </label>
+                                    <input type = "number" id = "shadowBC" min="0" oninput = "textDeco(clock, shadowHC, shadowVC, shadowBC, shadowCPC, fontSizeC)" value = 18>
+                                </div>
+                                <div>
+                                    <label for = "shadowCPC">Shadow Color : </label>
+                                    <input type = "color" id = "shadowCPC" oninput = "textDeco(clock, shadowHC, shadowVC, shadowBC, shadowCPC, fontSizeC)">
+                                </div>
+                            </div>
+                            <div class = "dateEdit"> Date Edit
+                                <div class = "fontFam"><label for = "fontFamD">Font : </label>
+                                    <select name = "fontFamD" id = "fontFamD" onchange = "fontDate(date, this)">
+                                        <option value = "basic">Default</option>
+                                        <option value = "arial">Arial</option>
+                                        <option value = "Comic Sans MS, Comic Sans, cursive">Comic Sans</option>
+                                        <option value = "'Pushster', cursive">Google font 1</option>
+                                        <option value = "Add URL" onclick="test2()">Add URL</option>
+                                    </select>
+                                </div>
+                                <div class = "fontURLContD" style = "display:none">
+                                    <label for = "fontURL">Font URL</label>
+                                    <input type = "text" id = "fontURL" oninput = "test2(this)" placeholder="W.I.P.">
+                                </div>
+                                <div>
+                                    <label for = "dateColor">Font Color : </label>
+                                    <input type = "color" id = "dateColor" oninput = "colorChanger(date, dateColor)">
+                                </div>
+                                <div>
+                                    <label for = "fontSizeD">Font Size : </label>
+                                    <input type = "number" id = "fontSizeD" oninput = "textDeco(date, shadowHD, shadowVD, shadowBD, shadowCPD, fontSizeD)" value = 100>
+                                </div>
+                                <div>
+                                    <label for = "shadowHD">Shadow Horizontal : </label>
+                                    <input type = "number" id = "shadowHD" oninput = "textDeco(date, shadowHD, shadowVD, shadowBD, shadowCPD, fontSizeD)" value = 0>
+                                </div>
+                                <div>
+                                    <label for = "shadowVD">Shadow Vertical : </label>
+                                    <input type = "number" id = "shadowVD" oninput = "textDeco(date, shadowHD, shadowVD, shadowBD, shadowCPD, fontSizeD)" value = 0>
+                                </div>
+                                <div>
+                                    <label for = "shadowBD">Shadow Blur : </label>
+                                    <input type = "number" id = "shadowBD" min="0" oninput = "textDeco(date, shadowHD, shadowVD, shadowBD, shadowCPD, fontSizeD)" value = 18>
+                                </div>
+                                <div>
+                                    <label for = "shadowCPD">Shadow Color : </label>
+                                    <input type = "color" id = "shadowCPD" oninput = "textDeco(date, shadowHD, shadowVD, shadowBD, shadowCPD, fontSizeD)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class = "display_Area">
+                    <div class = "date"></div>
+                    <div class = "clock" id = "cl1"></div>
+                    <div class = "clock" id = "cl2" style = "display: none;">
+                        <div class="block" id="0"></div>
+                        <div class="block" id="1"></div>
+                        <div class="block" id="2"></div>
+                        <div class="block" id="3"></div>
+                        <div class="block" id="4"></div>
+                        <div class="block" id="5"></div>
+                        <div class="block" id="6"></div>
+                        <div class="block" id="7"></div>
+                        <div class="block" id="8"></div>
+                        <div class="block" id="9"></div>
+                        <div class="block" id="10"></div>
+                        <div class="block" id="11"></div>
+                        <div class="block" id="12"></div>
+                        <div class="block" id="13"></div>
+                        <div class="block" id="14"></div>
+                        <div class="block" id="15"></div>
+                        <div class="block" id="16"></div>
+                        <div class="block" id="17"></div>
+                        <div class="block" id="18"></div>
+                        <div class="block" id="19"></div>
+                        <div class="block" id="20"></div>
+                        <div class="block" id="21"></div>
+                        <div class="block" id="22"></div>
+                        <div class="block" id="23"></div>
+                        <div class="block" id="24"></div>
+                        <div class="block" id="25"></div>
+                        <div class="block" id="26"></div>
+                        <div class="block" id="27"></div>
+                        <div class="block" id="28"></div>
+                        <div class="block" id="29"></div>
+                        <div class="block" id="30"></div>
+                        <div class="block" id="31"></div>
+                        <div class="block" id="32"></div>
+                        <div class="block" id="33"></div>
+                        <div class="block" id="34"></div>
+                        <div class="block" id="35"></div>
+                        <div class="block" id="36"></div>
+                        <div class="block" id="37"></div>
+                        <div class="block" id="38"></div>
+                        <div class="block" id="39"></div>
+                        <div class="block" id="40"></div>
+                        <div class="block" id="41"></div>
+                        <div class="block" id="42"></div>
+                        <div class="block" id="43"></div>
+                        <div class="block" id="44"></div>
+                        <div class="block" id="45"></div>
+                        <div class="block" id="46"></div>
+                        <div class="block" id="47"></div>
+                        <div class="block" id="48"></div>
+                        <div class="block" id="49"></div>
+                        <div class="block" id="50"></div>
+                        <div class="block" id="51"></div>
+                        <div class="block" id="52"></div>
+                        <div class="block" id="53"></div>
+                        <div class="block" id="54"></div>
+                        <div class="block" id="55"></div>
+                        <div class="block" id="56"></div>
+                        <div class="block" id="57"></div>
+                        <div class="block" id="58"></div>
+                        <div class="block" id="59"></div>
+                        <div class="divider"></div>
+                    </div>
+                    <div class = "clock" id = "cl3" style = "display: none;">
+                        <div class = "c3Hours">
+                            <div class = "stripe">
+                                <div class = "nums">0</div>
+                                <div class = "nums">1</div>
+                                <div class = "nums">2</div>
+                            </div>
+                            <div class = "stripe">
+                                <div class = "nums">0</div>
+                                <div class = "nums">1</div>
+                                <div class = "nums">2</div>
+                                <div class = "nums">3</div>
+                                <div class = "nums">4</div>
+                                <div class = "nums">5</div>
+                                <div class = "nums">6</div>
+                                <div class = "nums">7</div>
+                                <div class = "nums">8</div>
+                                <div class = "nums">9</div>
+                            </div>
+                        </div>
+                        <div class = "c3Minutes">
+                            <div class = "stripe">
+                                <div class = "nums">0</div>
+                                <div class = "nums">1</div>
+                                <div class = "nums">2</div>
+                                <div class = "nums">3</div>
+                                <div class = "nums">4</div>
+                                <div class = "nums">5</div>
+                            </div>
+                            <div class = "stripe">
+                                <div class = "nums">0</div>
+                                <div class = "nums">1</div>
+                                <div class = "nums">2</div>
+                                <div class = "nums">3</div>
+                                <div class = "nums">4</div>
+                                <div class = "nums">5</div>
+                                <div class = "nums">6</div>
+                                <div class = "nums">7</div>
+                                <div class = "nums">8</div>
+                                <div class = "nums">9</div>
+                            </div>
+                        </div>
+                        <div class = "c3Secondes">
+                            <div class = "stripe">
+                                <div class = "nums">0</div>
+                                <div class = "nums">1</div>
+                                <div class = "nums">2</div>
+                                <div class = "nums">3</div>
+                                <div class = "nums">4</div>
+                                <div class = "nums">5</div>
+                            </div>
+                            <div class = "stripe">
+                                <div class = "nums">0</div>
+                                <div class = "nums">1</div>
+                                <div class = "nums">2</div>
+                                <div class = "nums">3</div>
+                                <div class = "nums">4</div>
+                                <div class = "nums">5</div>
+                                <div class = "nums">6</div>
+                                <div class = "nums">7</div>
+                                <div class = "nums">8</div>
+                                <div class = "nums">9</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class= "contact"></div>
+    </div>
+
+    <script src="clock.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

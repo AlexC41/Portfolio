@@ -1,0 +1,26 @@
+.project-wrap img {
+    width: 200px;
+}
+
+.project-wrap {
+    margin: 5px 5px 5px 5px;
+    padding: 5px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    /* height: 300px; */
+}
+
+.projects {
+    border: 2px solid black;
+    margin-right: 3vw;
+    height: auto;
+    width: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+}

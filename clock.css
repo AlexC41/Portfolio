@@ -1,0 +1,258 @@
+.clock_content {
+  display: flex;
+  width: inherit;
+  /* border: dashed 2px blue; */
+}
+
+.options {
+  border: 5px solid black;
+  text-align: center;
+  width: 15vw;
+  line-height: 1.5;
+  height: fit-content;
+}
+
+.tech_sett {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
+
+.display_Area {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  width: inherit;
+  height: 80vh;
+  background-color: #2d2d2d;   
+  /* border: dashed 2px red; */
+}
+
+/* clock 1 from here down */
+
+#cl1, .date {
+  font-size: 100px;
+  color: #fff;
+  margin-left: 40px;
+  border-left: solid 4px #ed1f24;
+  padding-left: 20px;
+}
+
+.HnS {
+  width: 15vw;
+  text-align: center;
+}
+
+.HnS img {
+  width: 2vw;
+  padding-right: 20px;
+}
+
+.HnS button {
+  background-color: #4CAF50;
+  border: none;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sliderCheck {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.names, .sliders {
+  display: flex;
+  flex-direction: column;
+}
+
+.names div {
+  height: 30px;
+  margin: 5px 0px;
+}
+
+.clockEdit, .dateEdit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.display input {
+  width: 17%;
+  height: inherit;
+}
+
+.fontFam select {
+  width: 100px;
+}
+
+.clockEdit > div, .dateEdit > div {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
+
+/* clock 2 from here down */
+
+#cl2 {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  width: 280px;
+  height: 100px; 
+  padding-top: 30px;
+  /* background-color: #4CAF50; */
+  /* border: solid 5px red; */
+}
+
+.block {
+  width: calc(100% / 12);
+  height: 20%;
+  color: #474747;
+  transition: .4s; 
+  /* border: solid 2px green; */
+}
+
+.block:not(:nth-child(n + 16)):nth-child(n + 11), .block:not(:nth-child(n + 46)):nth-child(n + 41) {
+  margin-right: 10px; 
+}
+
+.block:not(:nth-child(n + 31)):nth-child(n + 26) {
+  margin-right: 20px; 
+}
+
+.block:before {
+  content: attr(id);
+  position: relative;
+  display: block;
+  /* font-size: 16px; */
+  line-height: 10px;
+  text-align: center; 
+}
+
+.block:nth-child(-n + 10):before {
+  content: "0" attr(id); 
+}
+
+.block.active:before {
+  color: whitesmoke;
+  font-weight: 500; 
+}
+
+.block.second:before {
+  color: #FF8300; 
+}
+
+.divider {
+  position: absolute;
+  width: 2px;
+  background-color: whitesmoke;
+  height: 60%;
+  top: 20%;
+  left: calc(50% + 19px); 
+}
+
+/* clock 2 from here down */
+
+#cl3 {
+  border: solid 5px red;
+  display: flex;
+  /* flex-direction: row; */
+  align-self: center;
+  justify-items: center;
+  color: white;
+  font-family: monospace;
+  font-size: 4vmin;
+  position: relative;
+}
+
+#cl3 > div {
+  display: flex;
+  flex-direction: row;
+}
+
+.nums {
+  width: 8vmin;
+  height: 8vmin;
+  display: grid;
+  place-items: center;
+  color: #f9fbfd;
+  transition: all 500ms 100ms ease;
+  border-radius: 50%;
+}
+.nums.pop {
+  color: #3e6ccb;
+  font-weight: bold;
+  transform: scale(1.3);
+  background-color: #dfe6f6;
+  box-shadow: -1vmin -1vmin 2vmin -0.5vmin #f9fbfd, 1vmin 1vmin 2vmin #a9bee8;
+}
+.stripe {
+  transition:  500ms ease-in-out;
+  border-radius: 1.333333333333333vmin;
+  background-color: #dfe6f6;
+  box-shadow: -1vmin -1vmin 2vmin -0.5vmin #f9fbfd, 1vmin 1vmin 2vmin #a9bee8;
+}
+
+
+
+/* slider from here down */
+
+.placeholder {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 5px 0px;
+}
+
+.placeholder input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+  
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+  
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+  
+input:checked + .slider {
+  background-color: #2196F3;
+}
+  
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+  transform: translateX(26px);
+}

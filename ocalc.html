@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oCalc</title>
+    <link rel="stylesheet" href="ocalc.css">
+</head>
+<body>
+    <div class = "logo"><a href="ocalc.html"><img src="resources/blog_logo_placeholder.png" alt="placeholder"></a></div>
+    <div class = "main">
+        <div class = "menu">
+            <div> <a href="index.html">Back to portfolio</a></div>
+            <div> <a href="">ummmm, da, cost resurse...</a></div>
+            <div> <a href="">cost 2</a></div>
+            <div> <a href="">cost 3</a></div>
+            <div> <a href="">cost 4</a></div>
+            <div> <a href="">cost 5</a></div>
+        </div>
+        <div class = "container">
+            <div>Cost calculator</div>
+            <div class = "selection">
+                <a href="#" id = "sel">Buildings</a>
+                ` - `
+                <a href="#" id = "sel">Researches</a>
+                ` - `
+                <a href="#" id = "sel">Fleet</a>
+                ` - `
+                <a href="#" id = "sel">Defense</a>
+                    <!-- de scos backticks-urile din vizual sau cautat alta solutie -->
+            </div>
+
+            <div>
+                <div>Costs : building - level</div>
+                <div class = "results">
+                    <div>Metal</div>
+                    <div>Crystal</div>
+                    <div>Deuterium</div>
+                    <div>Energy</div>
+                    <div>Constr time</div>
+                    <div>Points</div>
+                    <div id = "showMetal">---</div>  <!-- maybe I should put them in a class for design...-->
+                    <div id = "showCrystal">---</div>
+                    <div id = "showDeuterium">---</div>
+                    <div id = "showEnergy">---</div>
+                    <div id = "showTime">---</div>
+                    <div id = "showPoints">---</div>
+                </div>
+            </div>
+
+            <div>
+                Level : <input type="text" maxlength = "2" oninput="show()" id = "bla" value = "4">
+            </div>
+
+            <select class = "test" size = "5" oninput="show()">
+                <option value="0">Metal Mine</option>
+                <option value="1">Crystal Mine</option>
+                <option value="2">Deuterium Synthesizer</option>
+                <option value="3" selected>Solar Plant</option>
+                <option value="4">Fusion Reactor</option>
+                <option value="5">Metal Storage</option>
+                <option value="6">Crystal Storage</option>
+                <option value="7">Deutherium Tank</option>
+                <option value="8">Robotics Factory</option>
+                <option value="9">Shipyard</option>
+                <option value="10">Research Lab</option>
+                <option value="11">Alliance Depot</option>
+            </select>
+
+            <div>
+                <div>
+                    Robotics Factory : <input type="text" maxlength = "2" oninput="show()" value = "0" id = "robFac">
+                </div>
+
+                <div>
+                    Nanite Factory : <input type="text" maxlength = "2" oninput="show()" value = "0" id = "nanFac">
+                </div>
+
+                <div>
+                    Shipyard : <input type="text" maxlength = "2" oninput="show()" value = "0" id = "shipyard">
+                </div>
+
+                <div>
+                    Research Lab : <input type="text" maxlength = "2" oninput="show()" value = "0" id = "resLab">
+                </div>
+
+                <div>
+                    Speed of the universe : <input type="text" maxlength = "2" oninput="show()" value = "8" id = "uniSpeed">
+                </div>
+
+                <div>
+                    Energy Technology : <input type="text" maxlength = "2" oninput="show()" value = "3" id = "enTech">
+                </div>
+
+                <div>
+                    Choosen Class : 
+                    <select size = "3" id = "chClass">
+                        <option value="0" selected>Collector</option>
+                        <option value="1">General</option>
+                        <option value="2">Discoverer</option>
+                    </select>
+                </div>
+                
+                <div>
+                    Technocrat : <input type="checkbox" id = "technocrat">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src = "ocalc.js"></script>
+    <!-- <script src = "index.js"></script> -->
+</body>
+</html>

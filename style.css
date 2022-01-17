@@ -1,0 +1,197 @@
+/* pentru index \/\/\/ */
+
+    /* pozitionare si organizare */
+
+
+
+/* ceas \/\/\/ */
+
+/* pozitionare si organizare \/\/\/ */
+
+
+/* .colors {
+    background-color: aqua;
+
+} */
+
+
+/* calculator \/\/\/ */
+
+/* pozitionare si organizare */
+.cont {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+.calculator {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+}
+.row {
+    width: 320px;
+    display: flex;
+}
+.keys {
+    width: 25%;
+    height: 50px;
+    font-size: 30px;
+}
+
+#sqrt, #powery, #parOpen, #parClose, #percent, #reverse, #period, #del { 
+    background-color: red;
+}
+.resultsDisplay { 
+    text-align: right;
+    background-color: coral;
+    border: 5px solid aqua;
+    padding-right: 10px;
+    width: 300px;
+    height: 85px;
+
+}
+.sentence {
+    font-size: 30px;
+}
+.result {
+    font-size: 20px;
+    opacity: 50%
+}
+
+
+
+/* PokeCards \/\/\/ */
+
+/* pozitionare si organizare */
+
+.poke-menu {
+    border: 5px solid green;
+    text-align: center;
+    line-height: 1.5;
+    height: fit-content;
+    margin: 0px 10px;
+}
+
+#input {
+    width: max-content;
+    text-align: center;
+}
+
+#history {
+    border: 1px solid black;
+}
+
+.limits {
+    width: 300px;
+    height: 450px;
+    border: 15px solid yellowgreen;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    background-image: radial-gradient(red 2%, yellow 80%);
+}
+
+.basicInfo {
+    /* border: 5px solid black; */
+    width: 16rem;
+    box-sizing: content;
+    padding: 5px 15px;
+    display: flex;
+    justify-content:space-between;
+    align-content: flex-start;
+}
+
+.name {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+#pokeType1 {
+    width: 20px;
+}
+#pokeType2 {
+    width: 20px;
+}
+
+.poke {
+    display : flex;
+    position: absolute;
+    align-self : center;
+    width: 12rem;
+    height: 12rem;
+    z-index: 1;
+}
+  
+.pokeBack {
+    display : flex;
+    align-self : center;
+    width: 12rem;
+    height: 12rem;
+    z-index: 0;
+}
+
+img.pokeBack { 
+    height: 12rem;
+}
+
+.desc{
+    display: flex;
+    align-self: center;
+}
+
+.powMove{
+    padding: 10px 10px 5px 10px;
+    display: flex;
+    align-self: space-between;
+}
+
+#moveType {
+    width: 20px;
+}
+
+.moveDesc {
+    font-size: 12px;
+    padding: 0px 10px
+}
+
+#mName {
+    font-weight: bold;
+}
+
+.movePow {
+    text-align: center;
+    vertical-align: bottom;
+    width: 50px;
+}
+
+.WNS {
+    width: 16rem;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    position: absolute;
+    left: 0px;
+    bottom: 85px;
+}
+
+.WNS img {
+    width: 1.5rem;
+    height: auto;
+}
+
+.bio {
+    /* width: inherit; */
+    margin: 0px 10px 5px 10px;
+    border: 1px solid red;
+    padding: 0px 10px;
+    position: absolute;
+    display: flex;
+    justify-self: flex-end;
+    bottom: 0px;
+    left: 0px;
+    /* height: ; */
+}

@@ -5,21 +5,77 @@ let showEnergy = document.querySelector("#showEnergy")
 let showTime = document.querySelector("#showTime")
 let showPoints = document.querySelector("#showPoints")
 
-
+// for the moment, here are only the base number for the buildings
 const base = [
-  //metal, crystal, deuterium, energy, time, points 
-    [60, 15, 0, 0, 0, 0], // metal mine
-    [48, 24, 0, 0, 0, 0], // crystal mine
-    [225, 75, 0, 0, 0, 0], // deuterium synthesizer
-    [75, 30, 0, 0, 0, 0], // solar plant
-    [900, 360, 180, 0, 0, 0], // fusion reactor
-    [1000, 0, 0, 0, 0, 0], // metal storage
-    [1000, 500, 0, 0, 0, 0], // crystal storage
-    [1000, 1000, 0, 0, 0, 0], // deuterium tank
-    [400, 120, 200, 0, 0, 0], // robotics factory
-    [400, 200, 100, 0, 0, 0], // shipyard
-    [200, 400, 2000, 0, 0, 0], // research lab
-    [20000, 40000, 0, 0, 0, 0] // alliance depot
+    // buildings
+    // metal, crystal, deuterium, energy,  points 
+    [60, 15, 0, 0, 0], // metal mine
+    [48, 24, 0, 0, 0], // crystal mine
+    [225, 75, 0, 0, 0], // deuterium synthesizer
+    [75, 30, 0, 0, 0], // solar plant
+    [900, 360, 180, 0, 0], // fusion reactor
+    [1000, 0, 0, 0, 0], // metal storage
+    [1000, 500, 0, 0, 0], // crystal storage
+    [1000, 1000, 0, 0, 0], // deuterium tank
+    [400, 120, 200, 0, 0], // robotics factory
+    [400, 200, 100, 0, 0], // shipyard
+    [200, 400, 2000, 0, 0], // research lab
+    [20000, 40000, 0, 0, 0], // alliance depot
+    [20000, 20000, 1000, 0, 0], // missile silo
+    [1000000, 500000, 100000, 0, 0], // nanite factory
+    [0, 50000, 100000, 1000, 0], // terraformer
+    [200, 0, 50, 50, 0], // space dock
+
+    // research
+    // metal, crystal, deuterium, points
+    [0, 800, 400, 0], // Energy Technology
+    [200, 100, 0, 0], // Laser Technology
+    [1000, 300, 100, 0], // Ion Technology
+    [0, 4000, 2000, 0], // Hyperspace Technology
+    [2000, 4000, 1000, 0], // Plasma Technology
+    [800, 0, 1200, 0], // Combustion Drive
+    [2000, 4000, 600, 0], // Impulse Drive
+    [10000, 20000, 6000, 0], // Hyperspace Drive
+    [200, 1000, 200, 0], // Espionage Technology
+    [0, 400, 600, 0], // Computer Technology
+    [3500, 7000, 3500, 0], // Astrophysics
+    [240000, 400000, 160000, 0], // Intergalactic Research Network
+    [800, 200, 0, 0], // Weapons Technology
+    [200, 600, 0, 0], // Shielding Technology
+    [2000, 0, 0, 0], // Armour Technology
+
+    // fleet
+    // metal, crystal, deuterium, points
+    [2000, 2000, 0, 0], //Small Cargo
+    [6000, 6000, 0, 0], //Large Cargo
+    [10000, 20000, 10000, 0], //Colony Ship
+    [10000, 6000, 0], //Recycler
+    [0, 1000, 0, 0], //Espionage Probe
+    [0, 2000, 500, 0], //Solar Satellite
+    [2000, 2000, 1000, 0], //Crawler
+    [3000, 1000, 0, 0], //Light Fighter
+    [6000, 4000, 0, 0], //Heavy Fighter
+    [20000, 7000, 2000, 0], //Cruiser
+    [45000, 15000, 0, 0], //Battleship
+    [30000, 40000, 15000, 0], //Battlecruiser
+    [50000, 25000, 15000, 0], //Bomber
+    [60000, 50000, 15000, 0], //Destroyer
+    [5000000, 4000000, 1000000, 0], //Deathstar
+    [85000, 55000, 20000, 0], //Reaper
+    [8000, 15000, 8000, 0], //Pathfinder
+
+    // defense
+    // metal, crystal, deuterium, points
+    [2000, 0, 0, 0], // Rocket Launcher
+    [1500, 500, 0, 0], // Light Laser
+    [6000, 2000, 0, 0], // Heavy Laser
+    [20000, 15000, 2000, 0], // Gauss Cannon
+    [2000, 6000, 0, 0], // Ion Cannon
+    [50000, 50000, 30000, 0], // Plasma Turret
+    [10000, 10000, 0, 0], // Small Shield Dome
+    [50000, 50000, 0, 0], // Large Shield Dome
+    [8000, 0, 2000, 0], // Anti-Ballistic Missiles
+    [12500, 2500, 10000, 0] // Interplanetary Missiles    
 ]
 
 // calculator for metal, crystal and deuterium
@@ -40,6 +96,9 @@ function resCalc (a,b,c){
         }
     
     //for the rest elements of the array
+    } else if (a == 15){
+        let output = Math.floor(base[a][b] * Math.pow(5,c-1));
+        return output
     } else {
 
         if (c == 1){
@@ -58,28 +117,7 @@ function resCalc (a,b,c){
     };
 }
 
-function timeRed (x){
-
-        switch (x) {
-            case value:
-                
-                break;
-        
-            default:
-                break;
-        }
-
-
-    // if (){
-        
-    // } if () {
-        
-    // }
-
- return x
-}
-
-// calculator for energy, construction time, points 
+// calculator for energy, construction time, points (when I will find the formula...)
 function detailCalc () {
 
 /*
@@ -87,28 +125,15 @@ literal formula for constrTime =
 (metal cost + crystal cost) / (2500 * (1 + robotic factory) * universe speed * (2 ^ nanite factory level))   
 calculated in hours
 */
-    let constrTime = 
-        (resCalc(check()[1],0,check()[0]) + resCalc(check()[1],1,check()[0]))  
-        /
-        (2500 * (1 + check()[2]) * check()[6] * Math.pow(2,check()[3]));
+    let constrTime = (resCalc(check()[1],0,check()[0]) + resCalc(check()[1],1,check()[0])) / (2500 * (1 + check()[2]) * (check()[6]) * Math.pow(2,check()[3]));
+       // NOTE : something is wrong with the formula... either the formula that I wrote, either the formula from https://ogame.fandom.com/wiki/Formulas 
 
     //time transform
 
-
-    // 2h 37min 12 sec  === 9432
-
-    let hours = 5.343
-    let seconds = hours * 3600
-
+    let seconds = constrTime * 3600
     let h = Math.floor(seconds / 3600);
     let m = Math.floor(seconds % 3600 / 60);
     let s = Math.floor(seconds % 3600 % 60);
-
-
-
-    // let h = Math.floor(x)
-    // let m = Math.floor(x * 60)
-    // let s = Math.floor((x % 60) * 60 * 60)
 
     s = s < 10 ? "0" + s : s; 
     m = m < 10 ? "0" + m : m; 
@@ -118,35 +143,58 @@ calculated in hours
 
 
     let energy = 0;
-    if (check()[1] <=4) {
-        if (check()[1] <= 2) {
-            if ( check()[1] == 2 ) {
-                energy = -Math.floor( 20 * check()[0] * Math.pow(1.1,check()[0]))
-            } else {
-                energy = -Math.floor( 10 * check()[0] * Math.pow(1.1,check()[0]))
-            }
-        } else {
-            if (check()[1] == 3) {
-                energy = Math.floor(20 * check()[0] * Math.pow(1.1,check()[0]))
-            } else {
-                energy = Math.floor(30 * check()[0] * Math.pow(1.05 + (0.01 * check()[9]),check()[0]))
-            }
-        } 
-    } else {
-        energy = 0;
+
+/*  negative : 
+        formula : check()[1] = [ 0, 1, 2 ]
+        unique value : check()[1] = [ 14, 15, 27 ]  1000, 50, 300000
+
+    positive :
+        formula : check()[1] = [ 3, 4, 36 ]  for 36 = (T/4 + 20)  ; T = max temp
+
+*/
+    switch (check()[1]) {
+        //negative with a formula
+        case "0":
+        case "1":
+            energy = -Math.floor( 10 * check()[0] * Math.pow(1.1,check()[0])) + 
+                    Math.floor( 10 * check()[0]-1 * Math.pow(1.1,check()[0]-1));
+            break;
+        case "2":
+            energy = -Math.floor( 20 * check()[0] * Math.pow(1.1,check()[0]))
+                    Math.floor( 20 * check()[0]-1 * Math.pow(1.1,check()[0]-1));
+            break;
+
+        // negative with a number
+        case "14":
+            energy = -Math.floor(1000 * Math.pow(2,check()[0]-1));
+            break;
+        case "15":
+            energy = -Math.floor(50 * Math.pow(2.5, check()[0]-1));
+            break;
+        case "27":
+            energy = -300000;
+            break;
+
+        // positive
+        case "3":
+            energy = Math.floor(20 * check()[0] * Math.pow(1.1,check()[0]));
+            break;
+        case "4":
+            energy = Math.floor(30 * check()[0] * Math.pow(1.05 + (0.01 * check()[9]),check()[0]));
+            break;
+        case "36":
+            energy = (check()[10]/4) + 20;
+            break;
+        
+        default:
+            energy = 0;
+            break;
     }
 
-
-//metal cost = resCalc(build,0,level)
-//crystal cost = resCalc(build,1,level)
-
-
-
-    
-
-        return [energy, time]
+    return [energy, time]
 };
 
+// check what is selected from the list
 function check () {
     let level = document.querySelector("#bla").value; // check()[0]
     let build = document.querySelector(".test").value; // check()[1]
@@ -158,7 +206,8 @@ function check () {
     let technocrat = document.querySelector("#technocrat").value// check()[7]
     let chClass = document.querySelector("#chClass").value // check()[8]
     let energyTech = document.querySelector("#enTech").value // check()[9]
-    return [level, build, robFac, nanFac, shipyard, resLab, uniSpeed, technocrat, chClass, energyTech]
+    let maxTemp = document.querySelector("#maxTemp").value // check()[10]
+    return [level, build, robFac, nanFac, shipyard, resLab, uniSpeed, technocrat, chClass, energyTech, maxTemp]
 }
 
 
@@ -171,20 +220,33 @@ function show () {
     // showPoints.innerHTML = 
 }
 
+let buildings = document.querySelector("#buildings")
+let research = document.querySelector("#research")
+let fleet = document.querySelector("#fleet")
+let defense = document.querySelector("#defense")
 
 
-// function test () {
-
-//     let a = 25;
-//     let b = 24;
-//     let c = a + b;
-
-//     let x = 12;
-//     let y = 13;
-//     let z = x + y;
-
-//     return[c, z]
-
+// function HidenSeek(x) {
+//     if (x.style.display === "none") {
+//         x.style.display = "block";
+//     }else {
+//         x.style.display = "none"
+//     }
 // }
 
-// console.log(test())
+function HidenSeek(x) {
+    console.log("intra in functie")
+
+    if (x.value = 2) {
+        console.log("true")
+        console.log(x)
+        x = false;
+        console.log(x)
+    } else {
+        console.log("false")
+        console.log(x)
+        x = true;
+        console.log(x)
+    }
+    return x
+}

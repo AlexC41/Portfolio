@@ -225,28 +225,31 @@ let research = document.querySelector("#research")
 let fleet = document.querySelector("#fleet")
 let defense = document.querySelector("#defense")
 
-
-// function HidenSeek(x) {
-//     if (x.style.display === "none") {
-//         x.style.display = "block";
-//     }else {
-//         x.style.display = "none"
-//     }
-// }
+console.log(document.querySelector(".test"))
 
 function HidenSeek(x) {
-    console.log("intra in functie")
 
-    if (x.value = 2) {
-        console.log("true")
-        console.log(x)
-        x = false;
-        console.log(x)
-    } else {
-        console.log("false")
-        console.log(x)
-        x = true;
-        console.log(x)
+    switch (x) {
+        case buildings:
+            
+            
+            break;
+        case research:
+            
+            break;
+        case fleet:
+            
+            break;
+        case defense:
+            
+            break;
+    
+        default:
+            console.log("test")
+
+            break;
     }
-    return x
+
+
+
 }

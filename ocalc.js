@@ -225,31 +225,31 @@ let research = document.querySelector("#research")
 let fleet = document.querySelector("#fleet")
 let defense = document.querySelector("#defense")
 
-console.log(document.querySelector(".test"))
-
 function HidenSeek(x) {
 
-    switch (x) {
-        case buildings:
-            
-            
-            break;
-        case research:
-            
-            break;
-        case fleet:
-            
-            break;
-        case defense:
-            
-            break;
-    
-        default:
-            console.log("test")
+    let idCheck = ["build", "rese", "flee", "defe"]
 
-            break;
+    if (x.id == "buildings") {
+        let z = [idCheck[0], idCheck[1], idCheck[2]]
+        z.forEach(function(){
+            z.style.display === "none"
+        })
+    } else {
+        console.log("test2")
     }
 
 
 
+
+
+    // this works... \/\/\/
+        
+    // for (const blablabla of test) {
+    //     let meah = test[blablabla.value]
+    //     console.log(meah.value)
+    //     meah.value = meah.value >= 16 ? meah.style.display = "none" : meah.style.display = "block"
+    // }
+
+    // this works... /\/\/\
+    
 }

@@ -53,73 +53,79 @@
                 Level : <input type="text" maxlength = "2" oninput="show()" id = "bla" value = "4">
             </div>
 
-            <select class = "test" size = "17" oninput="show()">
+            <select class = "test" id = "build" size = "17" oninput="show()">
                 <!-- from here down are for buildings -->
-                <option value="0" id = "build" selected>Metal Mine</option>
-                <option value="1" id = "build">Crystal Mine</option>
-                <option value="2" id = "build">Deuterium Synthesizer</option>
-                <option value="3" id = "build">Solar Plant</option>
-                <option value="4" id = "build">Fusion Reactor</option>
-                <option value="5" id = "build">Metal Storage</option>
-                <option value="6" id = "build">Crystal Storage</option>
-                <option value="7" id = "build">Deutherium Tank</option>
-                <option value="8" id = "build">Robotics Factory</option>
-                <option value="9" id = "build">Shipyard</option>
-                <option value="10" id = "build">Research Lab</option>
-                <option value="11" id = "build">Alliance Depot</option>
-                <option value="12" id = "build">Missile Silo</option>
-                <option value="13" id = "build">Nanite Factory</option>
-                <option value="14" id = "build">Terraformer</option>
-                <option value="15" id = "build">Space Dock</option>
+                <option value="0" selected>Metal Mine</option>
+                <option value="1">Crystal Mine</option>
+                <option value="2">Deuterium Synthesizer</option>
+                <option value="3">Solar Plant</option>
+                <option value="4">Fusion Reactor</option>
+                <option value="5">Metal Storage</option>
+                <option value="6">Crystal Storage</option>
+                <option value="7">Deutherium Tank</option>
+                <option value="8">Robotics Factory</option>
+                <option value="9">Shipyard</option>
+                <option value="10">Research Lab</option>
+                <option value="11">Alliance Depot</option>
+                <option value="12">Missile Silo</option>
+                <option value="13">Nanite Factory</option>
+                <option value="14">Terraformer</option>
+                <option value="15">Space Dock</option>
+            </select>
 
+            <select class = "test" id = "rese" size = "17" oninput="show()">
                 <!-- from here down are for research -->
-                <option value="16" id = "rese">Energy Technology</option>
-                <option value="17" id = "rese">Laser Technology</option>
-                <option value="18" id = "rese">Ion Technology</option>
-                <option value="19" id = "rese">Hyperspace Technology</option>
-                <option value="20" id = "rese">Plasma Technology</option>
-                <option value="21" id = "rese">Combustion Drive</option>
-                <option value="22" id = "rese">Impulse Drive</option>
-                <option value="23" id = "rese">Hyperspace Drive</option>
-                <option value="24" id = "rese">Espionage Technology</option>
-                <option value="25" id = "rese">Computer Technology</option>
-                <option value="26" id = "rese">Astrophysics</option>
-                <option value="27" id = "rese">Intergalactic Research Network</option>
-                <option value="28" id = "rese">Graviton Technology</option>
-                <option value="29" id = "rese">Weapons Technology</option>
-                <option value="30" id = "rese">Shielding Technology</option>
-                <option value="31" id = "rese">Armour Technology</option>
+                <option value="16">Energy Technology</option>
+                <option value="17">Laser Technology</option>
+                <option value="18">Ion Technology</option>
+                <option value="19">Hyperspace Technology</option>
+                <option value="20">Plasma Technology</option>
+                <option value="21">Combustion Drive</option>
+                <option value="22">Impulse Drive</option>
+                <option value="23">Hyperspace Drive</option>
+                <option value="24">Espionage Technology</option>
+                <option value="25">Computer Technology</option>
+                <option value="26">Astrophysics</option>
+                <option value="27">Intergalactic Research Network</option>
+                <option value="28">Graviton Technology</option>
+                <option value="29">Weapons Technology</option>
+                <option value="30">Shielding Technology</option>
+                <option value="31">Armour Technology</option>
+            <!-- </select>
 
+            <select class = "test" id = "flee" size = "17" oninput="show()"> -->
                 <!-- from here down are for fleet -->
-                <option value="32" id = "flee">Small Cargo</option>
-                <option value="33" id = "flee">Large Cargo</option>
-                <option value="34" id = "flee">Colony Ship</option>
-                <option value="35" id = "flee">Recycler</option>
-                <option value="36" id = "flee">Espionage Probe</option>
-                <option value="37" id = "flee">Solar Satellite</option>
-                <option value="38" id = "flee">Crawler</option>
-                <option value="39" id = "flee">Light Fighter</option>
-                <option value="40" id = "flee">Heavy Fighter</option>
-                <option value="41" id = "flee">Cruiser</option>
-                <option value="42" id = "flee">Battleship</option>
-                <option value="43" id = "flee">Battlecruiser</option>
-                <option value="44" id = "flee">Bomber</option>
-                <option value="45" id = "flee">Destroyer</option>
-                <option value="46" id = "flee">Deathstar</option>
-                <option value="47" id = "flee">Reaper</option>
-                <option value="48" id = "flee">Pathfinder</option>
+                <option value="32">Small Cargo</option>
+                <option value="33">Large Cargo</option>
+                <option value="34">Colony Ship</option>
+                <option value="35">Recycler</option>
+                <option value="36">Espionage Probe</option>
+                <option value="37">Solar Satellite</option>
+                <option value="38">Crawler</option>
+                <option value="39">Light Fighter</option>
+                <option value="40">Heavy Fighter</option>
+                <option value="41">Cruiser</option>
+                <option value="42">Battleship</option>
+                <option value="43">Battlecruiser</option>
+                <option value="44">Bomber</option>
+                <option value="45">Destroyer</option>
+                <option value="46">Deathstar</option>
+                <option value="47">Reaper</option>
+                <option value="48">Pathfinder</option>
+            <!-- </select>
 
+            <select class = "test" id = "defe" size = "17" oninput="show()"> -->
                 <!-- from here down are for defense -->
-                <option value="49" id = "defe">Rocket Launcher</option>
-                <option value="50" id = "defe">Light Laser</option>
-                <option value="51" id = "defe">Heavy Laser</option>
-                <option value="52" id = "defe">Gauss Cannon</option>
-                <option value="53" id = "defe">Ion Cannon</option>
-                <option value="54" id = "defe">Plasma Turret</option>
-                <option value="55" id = "defe">Small Shield Dome</option>
-                <option value="56" id = "defe">Large Shield Dome</option>
-                <option value="57" id = "defe">Anti-Ballistic Missiles</option>
-                <option value="58" id = "defe">Interplanetary Missiles</option>               
+                <option value="49">Rocket Launcher</option>
+                <option value="50">Light Laser</option>
+                <option value="51">Heavy Laser</option>
+                <option value="52">Gauss Cannon</option>
+                <option value="53">Ion Cannon</option>
+                <option value="54">Plasma Turret</option>
+                <option value="55">Small Shield Dome</option>
+                <option value="56">Large Shield Dome</option>
+                <option value="57">Anti-Ballistic Missiles</option>
+                <option value="58">Interplanetary Missiles</option>               
             </select>
 
             <div>
@@ -147,6 +153,9 @@
                     Energy Technology : <input type="text" maxlength = "2" oninput="show()" value = "3" id = "enTech">
                 </div>
 
+                <div>
+                    Min Temperature : <input type="text" maxlength = "2" oninput="show()" value = "41" id = "minTemp">
+                </div>
                 <div>
                     Max Temperature : <input type="text" maxlength = "2" oninput="show()" value = "81" id = "maxTemp">
                 </div>

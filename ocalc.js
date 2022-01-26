@@ -182,7 +182,8 @@ calculated in hours
         case "4":
             energy = Math.floor(30 * check()[0] * Math.pow(1.05 + (0.01 * check()[9]),check()[0]));
             break;
-        case "36":
+        case "37":
+            energy = Math.
             energy = (check()[10]/4) + 20;
             break;
         
@@ -227,18 +228,18 @@ let defense = document.querySelector("#defense")
 
 function HidenSeek(x) {
 
-    let idCheck = ["build", "rese", "flee", "defe"]
-
-    if (x.id == "buildings") {
-        let z = [idCheck[0], idCheck[1], idCheck[2]]
-        z.forEach(function(){
-            z.style.display === "none"
-        })
-    } else {
-        console.log("test2")
+    let test = Array.from(document.querySelector("#build"))
+    // let test2 = test
+    console.log(test)
+    let meah = [] ;
+    for (const blablabla of test) {
+            meah = test[blablabla.value]
+            console.log(meah.value)      
+        return meah  
     }
 
-
+    console.log(meah)
+}
 
 
 
@@ -251,5 +252,4 @@ function HidenSeek(x) {
     // }
 
     // this works... /\/\/\
-    
-}
+
